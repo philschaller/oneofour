@@ -82,7 +82,7 @@ public class Application
             }
         };
 
-        try ( final AutoConnectClient client = new AutoConnectClient ( args[0], port, options.build (), modulesFactory, listener ) )
+        try ( final AutoConnectClient client = new AutoConnectClient ( args[0], port, options.build (), modulesFactory, List.of(listener) ) )
         {
             while ( true )
             {
